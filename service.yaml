@@ -1,0 +1,175 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: adservice
+  labels:
+    app: adservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: adservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cartservice
+  labels:
+    app: cartservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: cartservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: checkoutservice
+  labels:
+    app: checkoutservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: checkoutservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: currencyservice
+  labels:
+    app: currencyservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: currencyservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: emailservice
+  labels:
+    app: emailservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: emailservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: frontend
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadgenerator
+  labels:
+    app: loadgenerator
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: loadgenerator
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: paymentservice
+  labels:
+    app: paymentservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: paymentservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: productcatalogservice
+  labels:
+    app: productcatalogservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: productcatalogservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendationservice
+  labels:
+    app: recommendationservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: recommendationservice
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shippingservice
+  labels:
+    app: shippingservice
+spec:
+  ports:
+    - name: http
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: shippingservice
+  type: LoadBalancer

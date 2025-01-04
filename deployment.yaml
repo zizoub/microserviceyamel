@@ -1,0 +1,241 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice
+  labels:
+    app: adservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adservice
+  template:
+    metadata:
+      labels:
+        app: adservice
+    spec:
+      containers:
+        - name: adservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/adservice:23
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartservice
+  labels:
+    app: cartservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cartservice
+  template:
+    metadata:
+      labels:
+        app: cartservice
+    spec:
+      containers:
+        - name: cartservice-container
+          image: sha256:6d477705a8d4a4fb1768b49bfe19723de89fb7a20e5fed393e4931751b708635
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkoutservice
+  labels:
+    app: checkoutservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: checkoutservice
+  template:
+    metadata:
+      labels:
+        app: checkoutservice
+    spec:
+      containers:
+        - name: checkoutservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/checkoutservice:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currencyservice
+  labels:
+    app: currencyservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currencyservice
+  template:
+    metadata:
+      labels:
+        app: currencyservice
+    spec:
+      containers:
+        - name: currencyservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/currencyservice:26
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emailservice
+  labels:
+    app: emailservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emailservice
+  template:
+    metadata:
+      labels:
+        app: emailservice
+    spec:
+      containers:
+        - name: emailservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/emailservice:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/frontend:26
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadgenerator
+  labels:
+    app: loadgenerator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loadgenerator
+  template:
+    metadata:
+      labels:
+        app: loadgenerator
+    spec:
+      containers:
+        - name: loadgenerator-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/loadgenerator:26
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymentservice
+  labels:
+    app: paymentservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paymentservice
+  template:
+    metadata:
+      labels:
+        app: paymentservice
+    spec:
+      containers:
+        - name: paymentservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/paymentservice:26
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productcatalogservice
+  labels:
+    app: productcatalogservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productcatalogservice
+  template:
+    metadata:
+      labels:
+        app: productcatalogservice
+    spec:
+      containers:
+        - name: productcatalogservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/productcatalogservice:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendationservice
+  labels:
+    app: recommendationservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recommendationservice
+  template:
+    metadata:
+      labels:
+        app: recommendationservice
+    spec:
+      containers:
+        - name: recommendationservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/recommendationservice:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shippingservice
+  labels:
+    app: shippingservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shippingservice
+  template:
+    metadata:
+      labels:
+        app: shippingservice
+    spec:
+      containers:
+        - name: shippingservice-container
+          image: 152512226309.dkr.ecr.us-east-1.amazonaws.com/152512226309/shippingservice:latest
+          ports:
+            - containerPort: 3000
